@@ -3,7 +3,9 @@ const keys = require("./dependencies/keys");
 const inq = require("inquirer");
 const colors = require("colors");
 
+//search dependencies
 const MovieSearch = require("./dependencies/movies/movieCLI.js");
+const ConcertSearch = require("./dependencies/concert/concertCLI.js");
 // const spotify = new Spotify(keys.spotify);
 
 
@@ -23,7 +25,8 @@ inq.prompt(selectMode).then((answer) => {
     console.log(`You chose: ${answer.selectMode}`);
 
     if (answer.selectMode === "concert") {
-        console.log(`${answer.selectMode} is coming soon...`);
+        const concert = new ConcertSearch();
+        concert.concertSearch();
     }
     else if (answer.selectMode === "spotify") {
         console.log(`${answer.selectMode} is coming soon...`);
