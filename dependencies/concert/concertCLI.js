@@ -5,7 +5,7 @@ const Search = require("./concertSearch");
 
 const questions = [{
     name: "bandSearch",
-    message: "Which band do you want to search for?".green
+    message: "Who do you want to search for?".green
 }]
 const Concert = function () {
     this.concertSearch = function () {
@@ -13,7 +13,8 @@ const Concert = function () {
             if (validator.isEmpty(answer.bandSearch)) {
                 console.log("you didn't type in anything");
             } else {
-                console.log(answer.bandSearch);
+                const searchResponse = new Search();
+                searchResponse.search(answer.bandSearch);
             };
         });
     }
