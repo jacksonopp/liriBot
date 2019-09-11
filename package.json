@@ -1,0 +1,22 @@
+{
+  "name": "liribot",
+  "version": "0.0.1",
+  "description": "a line interface interpreter",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jacksonopp/liriBot.git"
+  },
+  "author": "Jackson Oppenheim",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jacksonopp/liriBot/issues"
+  },
+  "homepage": "https://github.com/jacksonopp/liriBot#readme",
+  "dependencies": {
+    "inquirer": "^7.0.0"
+  }
+}
