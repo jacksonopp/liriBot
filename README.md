@@ -1,14 +1,14 @@
 # liriBot
 
-######Written in node.js by Jackson Oppenheim
+###### Written in node.js by Jackson Oppenheim
 
 ---
 
-###What is liriBot?
+### What is liriBot?
 
 liriBot is a command line interface that allows you to select a program from a list, then, if that program has it, allows you to input a search parameter. It then searches through the proper API to return information on your search term.
 
-###NPM Dependencies
+### NPM Dependencies
 
 -  axios 0.19.0
 -  colors 1.3.3
@@ -18,13 +18,13 @@ liriBot is a command line interface that allows you to select a program from a l
 -  node-spotify-api 1.1.1
 -  validator 11.1.0
 
-###APIs
+### APIs
 
 -  SpotifyAPI
 -  OMDb
 -  BandsInTown
 
-## ###Organization
+### Organization
 
 ```
 project
