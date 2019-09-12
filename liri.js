@@ -3,6 +3,7 @@ require("dotenv").config();
 const keys = require("./dependencies/spotify/keys");
 const inq = require("inquirer");
 const colors = require("colors");
+const fs = require("fs");
 
 //importing search dependencies
 const MovieSearch = require("./dependencies/movies/movieCLI.js");
@@ -45,6 +46,6 @@ inq.prompt(selectMode).then((answer) => {
     }
     //if you chose this, i'll figure out what to write here
     else if (answer.selectMode === "do what it says") {
-        console.log(`${answer.selectMode} is coming soon...`);
+        console.log("coming soon");
     }
 })
