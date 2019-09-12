@@ -1,6 +1,6 @@
 # liriBot
 
-###### Written in node.js by Jackson Oppenheim
+###### Written using node.js by Jackson Oppenheim
 
 ---
 
