@@ -104,4 +104,4 @@ The app will then send an `axios.get` request to the appropriate API and return 
 
 ### Demo Video
 
-To see the demo video, download `demo.mov` in the `videos` folder.
+To see the app in action, [watch this video on YouTube](https://youtu.be/QHbnngka8Xg)
