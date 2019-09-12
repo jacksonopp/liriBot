@@ -64,6 +64,20 @@ In your terminal, navigate to the project's root folder, and type:
 ```
 npm add
 ```
+
+** Then you must add your own spotify API keys **
+
+In your `root` folder, add a file titled `.env`.
+Inside this file add the following lines, making sure to replace `YOUR-SPOTIFY-ID` AND `YOUR-SPOTIFY-SECRET` with codes generated through Spotify. For more information, visit [Spotify's API Documentation](https://developer.spotify.com/documentation/web-api/)
+
+```
+# Spotify API keys
+
+SPOTIFY_ID=YOUR-SPOTIFY-ID
+SPOTIFY_SECRET=YOUR-SPOTIFY-SECRET
+
+```
+
 To run the program, make sure you are still in the project's root folder and type:
 
 ```
@@ -89,4 +103,5 @@ If you select any of the first three `concert spotify movie`, the next line will
 The app will then send an `axios.get` request to the appropriate API and return the requested information.
 
 ### Demo Video
+
 To see the demo video, download `demo.mov` in the `videos` folder.
