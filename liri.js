@@ -9,7 +9,7 @@ const fs = require("fs");
 const MovieSearch = require("./dependencies/movies/movieCLI.js");
 const ConcertSearch = require("./dependencies/concert/concertCLI.js");
 const SpotifySearch = require("./dependencies/spotify/spotifyCLI.js");
-// const spotify = new Spotify(keys.spotify);
+const DoWhatItSays = require("./dependencies/doWhatItSays/doWhatItSays.js");
 
 //creating an object to hold the select mode for inquirer
 const selectMode = [{
@@ -46,6 +46,17 @@ inq.prompt(selectMode).then((answer) => {
     }
     //if you chose this, i'll figure out what to write here
     else if (answer.selectMode === "do what it says") {
-        console.log("coming soon");
+        let dataArr = [];
+        fs.readFile("./random.txt", "utf8", (err, data) => {
+            if (err) {
+                console.log(err);
+            } else {
+                dataArr = data.split(",");
+                console.log(dataArr);
+                const doIt = new DoWhatItSays();
+                doIt.check(dataArr[0], dataArr[1]);
+            }
+        })
+
     }
 })

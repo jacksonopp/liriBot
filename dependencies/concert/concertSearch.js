@@ -22,7 +22,6 @@ Date: ${moment(responseData.datetime).format("MM/DD/YYYY")}`)
         })
     }
 }
-// Date: ${ moment(response.data.datetime).format("MM/DD/YYYY") }
 
 //export ConcertSearch construction
 module.exports = ConcertSearch;

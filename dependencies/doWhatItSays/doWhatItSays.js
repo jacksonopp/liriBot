@@ -1,15 +1,23 @@
 const fs = require("fs");
 const colors = require("colors");
 
+//import my modules
+const Concert = require("../concert/concertSearch");
+const Movies = require("../movies/movieSearch");
+const Spotify = require("../spotify/spotifySearch");
+
 const Do = function () {
     this.concert = function (searchTerm) {
-        console.log(searchTerm);
+        const concertResponse = new Concert();
+        concertResponse.search(searchTerm);
     };
     this.movie = function (searchTerm) {
-        console.log(searchTerm);
+        const movieResponse = new Movies();
+        movieResponse.search(searchTerm);
     };
     this.spotify = function (searchTerm) {
-        console.log(searchTerm);
+        const spotifyResponse = new Spotify();
+        spotifyResponse.search(searchTerm);
     };
     this.other = function () {
         console.log("Please enter a valid method in random.txt".red);
@@ -36,14 +44,5 @@ const Do = function () {
     }
 }
 
-const action = new Do();
 
-fs.readFile("../../random.txt", "utf8", (err, data) => {
-    if (err) {
-        console.log(err);
-    } else {
-        const dataArr = data.split(",");
-        console.log(dataArr);
-        action.check(dataArr[0], dataArr[1]);
-    }
-})
+module.exports = Do;
