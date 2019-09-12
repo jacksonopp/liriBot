@@ -55,7 +55,8 @@ project
 
 ```
 
-###How to run the app
+### How to run the app
+
 In your terminal, navigate to the project's root folder, and type
 
 ```
