@@ -57,7 +57,14 @@ project
 
 ### How to run the app
 
-In your terminal, navigate to the project's root folder, and type
+** First you must install the npm dependencies **
+
+In your terminal, navigate to the project's root folder, and type:
+
+```
+npm add
+```
+To run the program, make sure you are still in the project's root folder and type:
 
 ```
 node liri.js
