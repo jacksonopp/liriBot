@@ -1,10 +1,15 @@
+require("dotenv").config();
+const keys = require("./keys");
+const Spotify = require("node-spotify-api");
+
 //importing npm modules
 const inq = require("inquirer");
 const colors = require("colors");
 const validator = require("validator");
 
+
 //importing the spotify search module from spotifySearch
-// const Search = require("./spotifySearch");
+const Search = require("./spotifySearch");
 
 //creating variable to hold the question
 const questions = [{
@@ -13,20 +18,22 @@ const questions = [{
 }]
 
 //constructing a Concert object
-const Spotify = function () {
+const SpotifySearch = function () {
     //adding the concertSearch method
     this.spotifySearch = function () {
         //adding inq prompt promise
         inq.prompt(questions).then((answer) => {
             //validator checks if there is no input and returns the default if so
             if (validator.isEmpty(answer.spotifySearch)) {
-                console.log("you didn't enter anything")
+                const searchResponse = new Search();
+                searchResponse.search("small things")
             } else {
-                console.log(answer.spotifySearch);
+                const searchResponse = new Search();
+                searchResponse.search(answer.spotifySearch);
             };
         });
     }
 }
 
 //exporting the Concert construction
-module.exports = Spotify;
+module.exports = SpotifySearch;

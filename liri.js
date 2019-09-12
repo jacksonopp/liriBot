@@ -1,6 +1,6 @@
 //importing npm modules
 require("dotenv").config();
-const keys = require("./dependencies/keys");
+const keys = require("./dependencies/spotify/keys");
 const inq = require("inquirer");
 const colors = require("colors");
 
